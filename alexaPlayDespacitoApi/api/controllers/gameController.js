@@ -4,6 +4,8 @@ var mongoose = require('mongoose'),
     Game = mongoose.model('Games');
 
 exports.list_all_games = function (req, res) {
+    console.log('list games...');
+
     Game.find({}, function (err, game) {
         if (err)
             res.send(err);

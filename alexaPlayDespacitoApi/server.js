@@ -3,22 +3,20 @@ var express = require('express'),
   port = process.env.PORT || 3000,
   mongoose = require('mongoose'),
   Game = require('./api/models/gameModel'),
+  User = require('./api/models/userModel'),
   bodyParser = require('body-parser');
-  
+
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://mongo:27017'); 
-
+mongoose.connect('mongodb://mongo:27017');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var routes = require('./api/routes/despacitoRoutes'); //importing route
-routes(app); //register the route
-
+var routes = require('./api/routes/routes');
+routes(app);
 
 app.listen(port);
 
-
-console.log('todo list RESTful API server started on: ' + port);
+console.log('list RESTful API server started on: ' + port);
