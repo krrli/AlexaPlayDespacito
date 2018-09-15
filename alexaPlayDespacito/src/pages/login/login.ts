@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
-import { MockProvider } from '../../providers/mock/mock';
-import {User} from "../../model/user";
+import { User } from "../../model/user";
 import { HomePage } from '../home/home';
+import { ApiProvider } from '../../providers/api/api';
 
 /**
  * Generated class for the LoginPage page.
@@ -17,19 +17,17 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  name:String;
-  nav:Nav;
+  name: string;
+  nav: Nav;
 
-  constructor(public navController: NavController, public navParams: NavParams, public mockProvider: MockProvider, nav: Nav ) {
+  constructor(public navController: NavController, public navParams: NavParams, public apiProvider: ApiProvider, nav: Nav) {
     this.nav = nav;
   }
 
-  login(){
-    let user:User = this.mockProvider.createUser(this.name, "asdf");
+  login() {
+    let user = this.apiProvider.createUser(new User(this.name, "asdf"));
     localStorage.setItem("poppQuizUser", JSON.stringify(user));
-
     this.nav.setRoot(HomePage);
-
   }
 
   ionViewDidLoad() {
