@@ -14,7 +14,7 @@ export class MockProvider {
     console.log('Hello MockProvider Provider');
   }
 
-  createUser(name: String, token: String): User {
+  public createUser(name: String, token: String): User {
     console.log('Create User');
     let user = new User("superUser", "nasjdkfagf4iurw4hfso84hrosei74");
     return user;
