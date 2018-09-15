@@ -6,7 +6,11 @@ services:
     - "3000:3000"
     depends_on:
     - mongo
+    volumes:
+    - ./:/usr/src/app
   mongo:
     image: mongo
     ports:
     - "27017:27017"
+volumes:
+  apisource:
