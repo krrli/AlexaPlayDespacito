@@ -25,7 +25,7 @@ SECRET_KEY = 'wpc_v5rb551-hxp&j$#zk_%x5jyfr&uom096$(qw1$7dk(oo*$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
