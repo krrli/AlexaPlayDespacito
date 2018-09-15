@@ -1,8 +1,9 @@
 class Game {
-    opponentName: string;
+    gameId: String;
+    opponentName: String;
     questions: Question[];
 
-    constructor(opponentName: string, questions: Question[]) {
+    constructor(opponentName: String, questions: Question[]) {
         this.opponentName = opponentName; this.questions = questions;
     }
 }

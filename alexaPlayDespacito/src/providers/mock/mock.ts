@@ -20,7 +20,7 @@ export class MockProvider {
     return user;
   }
 
-  createGame(): Game {
+  newGame(userId: String): Game {
 
     console.log('Create Game');
 
@@ -37,11 +37,11 @@ export class MockProvider {
     return game;
   }
 
-  getAllGames() {
+  getAllGames(userId: String) {
     console.log('get Games');
   }
 
-  setResponse(songIndex: number, points: number) {
+  setResponse(questionId: number, points: number) {
     console.log('set Response');
   }
 

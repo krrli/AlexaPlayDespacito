@@ -1,10 +1,10 @@
 class Question {
-
-    songUri: string;
+    questionId: number;
+    songUri: String;
     points: number;
     responses: ResponseItem[];
 
-    constructor(songUri: string, responses: ResponseItem[]) {
+    constructor(songUri: String, responses: ResponseItem[]) {
         this.songUri = songUri; this.responses = responses;
     }
 }
