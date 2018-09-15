@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MockProvider } from '../providers/mock/mock';
 import { LoginPage } from '../pages/login/login';
+import { ApiProvider } from '../providers/api/api';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoginPage } from '../pages/login/login';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MockProvider
+    MockProvider,
+    ApiProvider
   ]
 })
 export class AppModule {}
