@@ -9,12 +9,14 @@ import { HomePage } from '../pages/home/home';
 import { MockProvider } from '../providers/mock/mock';
 import { LoginPage } from '../pages/login/login';
 import { ApiProvider } from '../providers/api/api';
+import { GamePage } from '../pages/game/game';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    GamePage
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { ApiProvider } from '../providers/api/api';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    GamePage,
     LoginPage,
     MyApp,
     HomePage
