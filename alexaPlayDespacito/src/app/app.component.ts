@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {Nav, Platform} from 'ionic-angular';
+import {Nav, NavController, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -26,8 +26,11 @@ export class MyApp {
     if (localStorage.getItem("poppQuizUser")) {
       console.log("yay!");
       this.nav.setRoot(HomePage);
+      //this.nav.push(HomePage);
     }else{
-      this.nav.setRoot(LoginPage);
+      //this.nav.setRoot(LoginPage);
+      this.nav.push(LoginPage);
+
     }
   }
 
