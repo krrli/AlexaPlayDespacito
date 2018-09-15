@@ -11,7 +11,7 @@ class Response(models.Model):
 
 
 class Question(models.Model):
-    uri = models.CharField(max_length=255, null=False)
+    url = models.CharField(max_length=255, null=False)
     points = models.IntegerField(default=0, null=False)
     responses = models.ManyToManyField(Response, related_name='responses')
 
