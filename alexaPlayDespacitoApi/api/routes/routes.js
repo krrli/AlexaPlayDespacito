@@ -3,9 +3,9 @@ module.exports = function (app) {
   var game_controller = require('../controllers/gameController');
   var user_controller = require('../controllers/userController');
 
-  app.route('/games')
-    .get(game_controller.list_all_games)
-    .post(game_controller.create_game);
+  app.route('/games/:userId')
+    .get(game_controller.listGames)
+    .post(game_controller.createGame);
 
 
   app.route('/games/:gameId')

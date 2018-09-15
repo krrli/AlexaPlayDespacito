@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
     id: {
-        type: number
+        type: Number
     },
     name: {
         type: String,

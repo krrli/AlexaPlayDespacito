@@ -4,13 +4,16 @@ var Schema = mongoose.Schema;
 
 
 var GameSchema = new Schema({
+    id: {
+        type: String
+    },
     player1: {
         type: String,
     },
     player2: {
         type: String,
     },
-    created_date: {
+    createdDate: {
         type: Date,
         default: Date.now
     },
