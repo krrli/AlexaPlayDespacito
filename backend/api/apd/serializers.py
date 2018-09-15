@@ -23,7 +23,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Question
-        fields = ('uri', 'points', 'responses')
+        fields = ('url', 'points', 'responses')
 
 
 class GameSerializer(serializers.ModelSerializer):
