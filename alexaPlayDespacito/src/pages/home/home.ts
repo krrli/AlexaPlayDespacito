@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Nav } from 'ionic-angular';
+import { GamePage } from '../game/game';
 
 
 @Component({
@@ -7,15 +8,13 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  nav: Nav;
 
-
-  constructor(public navCtrl: NavController) {
-    var audio = new Audio('https://p.scdn.co/mp3-preview/9a712112b9a333e326ff46c93e83c4c9e17b8e80?cid=774b29d4f13844c495f206cafdad9c86');
-    audio.play();
+  constructor(public navCtrl: NavController, nav: Nav) {
+    this.nav = nav;
   }
 
-  public playSong() {
-    var audio = new Audio('https://p.scdn.co/mp3-preview/9a712112b9a333e326ff46c93e83c4c9e17b8e80?cid=774b29d4f13844c495f206cafdad9c86');
-    audio.play();
+  public newGame() {
+    this.nav.setRoot(GamePage);
   }
 }

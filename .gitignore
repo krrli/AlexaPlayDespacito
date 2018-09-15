@@ -2,3 +2,5 @@
 alexaPlayDespacitoApi/node_modules/
 
 *.log
+
+\.idea/
