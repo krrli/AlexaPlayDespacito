@@ -17,6 +17,7 @@ import { ApiProvider } from '../../providers/api/api';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+
   name: string;
   nav: Nav;
 
@@ -25,13 +26,14 @@ export class LoginPage {
   }
 
   login() {
-    let user = this.apiProvider.createUser(new User(this.name, "asdf"));
-    localStorage.setItem("poppQuizUser", JSON.stringify(user));
-    this.nav.setRoot(HomePage);
+
+    this.apiProvider.createUser(new User(this.name)).subscribe((data) => {
+      localStorage.setItem("poppQuizUser", JSON.stringify(data));
+      this.nav.setRoot(HomePage);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-
 }
