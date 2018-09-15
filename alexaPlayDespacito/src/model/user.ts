@@ -1,4 +1,4 @@
-class User {
+export class User {
     userId: number;
     name: string;
     token: string;

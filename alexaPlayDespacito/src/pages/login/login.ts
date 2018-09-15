@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MockProvider } from '../../providers/mock/mock';
+import {User} from "../../model/user";
 
 /**
  * Generated class for the LoginPage page.
@@ -21,7 +22,9 @@ export class LoginPage {
   }
 
   login(){
-    this.mockProvider.createUser(this.name, "asdf");
+    let user:User = this.mockProvider.createUser(this.name, "asdf");
+    localStorage.setItem("poppQuizUser", JSON.stringify(user));
+
   }
 
   ionViewDidLoad() {

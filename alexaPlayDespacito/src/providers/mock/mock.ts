@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {User} from "../../model/user";
 
 /*
   Generated class for the MockProvider provider.
@@ -45,6 +46,6 @@ export class MockProvider {
     console.log('set Response');
   }
 
-  
+
 }
 
