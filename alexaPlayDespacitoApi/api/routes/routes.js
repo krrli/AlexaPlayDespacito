@@ -1,18 +1,18 @@
 'use strict';
 module.exports = function (app) {
-  var game_controller = require('../controllers/gameController');
-  var user_controller = require('../controllers/userController');
+  var gameController = require('../controllers/gameController');
+  var userController = require('../controllers/userController');
 
   app.route('/games/:userId')
-    .get(game_controller.listGames)
-    .post(game_controller.createGame);
+    .get(gameController.listGames)
+    .post(gameController.createGame);
 
+  app.route('/results/:gameId')
+    .post(gameController.sendResults);
 
-  app.route('/games/:gameId')
-    .get(game_controller.get_game)
-    .put(game_controller.set_response);
+  app.route('/users')
+    .post(userController.createUser);
 
-  app.route('/user')
-    .get(user_controller.list_all_user)
-    .post(user_controller.create_user);
+  app.route('/users/:userId')
+    .get(userController.getUser);
 };

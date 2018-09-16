@@ -5,13 +5,7 @@ var Schema = mongoose.Schema;
 
 
 var UserSchema = new Schema({
-    id: {
-        type: Number
-    },
-    name: {
-        type: String,
-    },
-    token: {
+    username: {
         type: String,
     }
 });

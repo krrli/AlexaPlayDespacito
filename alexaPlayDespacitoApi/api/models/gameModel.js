@@ -4,14 +4,13 @@ var Schema = mongoose.Schema;
 
 
 var GameSchema = new Schema({
-    id: {
-        type: String
+    challanger: {
+        id: String,
+        username: String,
     },
-    player1: {
-        type: String,
-    },
-    player2: {
-        type: String,
+    opponent: {
+        id: String,
+        username: String,
     },
     createdDate: {
         type: Date,
@@ -23,7 +22,10 @@ var GameSchema = new Schema({
             enum: ['ongoing', 'completed']
         }],
         default: ['ongoing']
-    }
+    },
+    questions: [
+        { songUrl: String, responses: [ { title: String, artist: String, songUrl: String}]}
+    ]
 });
 
 module.exports = mongoose.model('Games', GameSchema);

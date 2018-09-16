@@ -14,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
 class ResponseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Response
-        fields = ('title', 'correct')
+        fields = ('name', 'artist', 'url', 'answer')
 
 
 
@@ -23,7 +23,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Question
-        fields = ('url', 'points', 'responses')
+        fields = ('url', 'responses')
 
 
 class GameSerializer(serializers.ModelSerializer):
