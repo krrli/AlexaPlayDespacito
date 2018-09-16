@@ -1,9 +1,10 @@
 export class User {
     userId: number;
-    name: string;
-    token: string;
+    username: string;
+    email: string;
 
-    constructor(name: string, token: string) {
-        this.name = name; this.token = token;
+    constructor(name: string) {
+        this.username = name;
+        this.email = name + '@test.com';
     }
 }

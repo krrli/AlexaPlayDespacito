@@ -1,4 +1,4 @@
-class ResponseItem {
+export class ResponseItem {
     title: String;
     isCorrect: Boolean;
     

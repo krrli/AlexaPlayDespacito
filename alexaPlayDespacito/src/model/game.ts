@@ -1,4 +1,6 @@
-class Game {
+import { Question } from "./question";
+
+export class Game {
     gameId: String;
     opponentName: String;
     questions: Question[];
