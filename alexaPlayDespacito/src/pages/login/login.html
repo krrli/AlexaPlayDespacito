@@ -9,16 +9,17 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-content padding>
+    <div class="center-content">
+        <img class="center" src="assets/imgs/logo.svg">
         <ion-list inset>
     
             <ion-item>
-              <ion-label>Username</ion-label>
+                <ion-label color="primary" floating>Username</ion-label>
               <ion-input type="text" [(ngModel)]="name"></ion-input>
             </ion-item>
 
           </ion-list>
     
           <button ion-button block (click)="login()">let's go</button>
-    </ion-content>
+        </div>
 </ion-content>
