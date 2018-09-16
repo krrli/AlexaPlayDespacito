@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {User} from "../../model/user";
+import { Game } from '../../model/game';
+import { ResponseItem } from '../../model/responseItem';
+import { Question } from '../../model/question';
 
 /*
   Generated class for the MockProvider provider.
@@ -17,7 +20,7 @@ export class MockProvider {
 
   public createUser(name: String, token: String): User {
     console.log('Create User');
-    let user = new User("superUser", "nasjdkfagf4iurw4hfso84hrosei74");
+    let user = new User("superUser");
     return user;
   }
 
@@ -32,7 +35,20 @@ export class MockProvider {
       new ResponseItem("Chop Suey - System of a Down", true)
     ];
 
-    let question = [new Question("http://play.spotify.com/song/2342341234", responses)];
+    let responses2 = [
+      new ResponseItem("Harry Potter - Michael Jackson", false),
+      new ResponseItem("asdf- A-HA", false),
+      new ResponseItem("Pasdf- Lady Gaga", false),
+      new ResponseItem("Cho Suey -p System of a Down", true)
+    ];
+
+    let question = [
+      new Question("https://p.scdn.co/mp3-preview/9a712112b9a333e326ff46c93e83c4c9e17b8e80?cid=774b29d4f13844c495f206cafdad9c86", responses),
+      new Question("https://p.scdn.co/mp3-preview/2ddba43917fe8892fe9cecd237b6f8b55a174186?cid=774b29d4f13844c495f206cafdad9c86", responses2),
+      new Question("https://p.scdn.co/mp3-preview/9a712112b9a333e326ff46c93e83c4c9e17b8e80?cid=774b29d4f13844c495f206cafdad9c86", responses),
+      new Question("https://p.scdn.co/mp3-preview/2ddba43917fe8892fe9cecd237b6f8b55a174186?cid=774b29d4f13844c495f206cafdad9c86", responses2),
+      new Question("https://p.scdn.co/mp3-preview/9a712112b9a333e326ff46c93e83c4c9e17b8e80?cid=774b29d4f13844c495f206cafdad9c86", responses),
+    ];
 
     let game = new Game("Evil John", question)
     return game;

@@ -1,11 +1,11 @@
 import { Question } from "./question";
 
 export class Game {
-    gameId: String;
-    opponentName: String;
+    gameId: string;
+    opponentName: string;
     questions: Question[];
 
-    constructor(opponentName: String, questions: Question[]) {
+    constructor(opponentName: string, questions: Question[]) {
         this.opponentName = opponentName; this.questions = questions;
     }
 }

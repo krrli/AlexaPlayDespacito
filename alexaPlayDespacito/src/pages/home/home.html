@@ -7,48 +7,12 @@
 </ion-header>
 
 <ion-content padding justify-content-center align-items-center>
-  <button (click)="newGame()" ion-button round>new game</button>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-4>
-        <ion-card>
-          <ion-card-content>
-            lülülü
-          </ion-card-content>
+  
+  <button (click)="newGame()" ion-button  block >new game</button>
+  
 
-        </ion-card>
-
-      </ion-col>
-      <ion-col col-4>
-        <ion-card>
-          <ion-card-content>
-            lülülülaaaaa
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-
-    </ion-row>
-    <ion-row>
-      <ion-col col-4>
-        <ion-card>
-          <ion-card-content>
-            lülülü
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-      <ion-col col-4>
-        <ion-card>
-          <ion-card-content>
-            lülülü  
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-
-    </ion-row>
-
-  </ion-grid>
+  <ion-card  *ngFor='let game of games' >
+    You vs. {{game.opponentName}}
+  </ion-card>
 
 </ion-content>
