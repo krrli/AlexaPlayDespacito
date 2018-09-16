@@ -1,4 +1,6 @@
-class Question {
+import { ResponseItem } from "./responseItem";
+
+export class Question {
     questionId: number;
     songUri: String;
     points: number;
